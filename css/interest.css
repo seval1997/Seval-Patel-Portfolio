@@ -1,0 +1,82 @@
+:root {
+    --interestHeaderFontSize: 2rem;
+    --interestFontSize: 1.5rem;
+}
+
+
+.sectionInterest {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: var(--sectionTransition);
+}
+
+.sectionInterestInvisible {
+    opacity: 0;
+    visibility: collapse;
+    height: 0px;
+    transition: var(--sectionTransition);
+}
+
+.interestContainer {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.strengthContainer, .cocuskillsContainer, .hobbiesContainer{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.hobbiesHeader, p.cocuskillHeader, p.strengthHeader {
+    color: white;
+    width: 100%;
+    font-size: var(--interestHeaderFontSize);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.hobbies, p.cocuskill, p.strength {
+    width: 100%;
+    color: white;
+    font-size: var(--interestFontSize);
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px){
+    :root {
+        --interestHeaderFontSize: 1.9rem;
+        --interestFontSize: 1.4rem;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    :root {
+        --interestHeaderFontSize: 1.8rem;
+        --interestFontSize: 1.3rem;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    :root {
+        --interestHeaderFontSize: 1.5rem;
+        --interestFontSize: 1rem;
+    }
+}

@@ -1,0 +1,141 @@
+
+div.sectionAcademic {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--sectionTransition);
+}
+
+div.sectionAcademicInvisible {
+    opacity: 0;
+    visibility: collapse;
+    height: 0px;
+    transition: var(--sectionTransition);
+}
+
+div.academicData {
+    height: 100%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: min(10%, 70px) auto min(10%, 70px);
+}
+
+div.academicInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.academicCard {
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, white 90%, #4A55A2);
+    box-shadow: 0px 10px 10px #4A55A2;
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr 1.5fr;
+    visibility: visible;
+    transition: var(--academicCardTransition);
+}
+
+div.academicCardInvisible {
+    opacity: 0;
+    height: 0px;
+    visibility: hidden;
+    transition: var(--academicCardTransition);
+}
+
+div.acCardHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 0px 10px;
+}
+
+p.acCardTitle {
+    font-size: var(--academicCardTitleFontSize);
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+p.acCardSubtitle {
+    font-size: var(--academicCardSubtitleFontSize);;
+    font-weight: bold;
+}
+
+div.acCardDegreeSummaryContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+p.acCardDegreeSummary {
+    font-size: var(--academicCardDegreeSummaryFontSize);
+    text-align: justify;
+}
+
+div.acCardGradeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+p.acCardGrade, p.acCardGraduation {
+    font-size: var(--academicCardDegreeGradeFontSize);
+    font-weight: bold;
+}
+
+div.stickyBtnLeft {
+    position: relative;
+    top: calc(50% - 25px);
+    left: 5px;
+}
+
+div.stickyBtnRight {
+    position: relative;
+    top: calc(50% - 25px);
+    right: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    :root {
+        --academicCardTitleFontSize: 1.5rem;
+        --academicCardSubtitleFontSize: 1.3rem;
+        --academicCardDegreeSummaryFontSize: 1.1rem;
+        --academicCardDegreeGradeFontSize: 1rem;
+    }
+    
+    div.academicData {
+        width: 80%;
+    }
+
+    div.academicCard {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --academicCardTitleFontSize: 1.5rem;
+        --academicCardSubtitleFontSize: 1.3rem;
+        --academicCardDegreeSummaryFontSize: 1.1rem;
+        --academicCardDegreeGradeFontSize: 1rem;
+    }
+
+    div.academicData {
+        width: 100%;
+    }   
+    
+    div.academicCard{
+        width: 90%;
+    };
+
+}

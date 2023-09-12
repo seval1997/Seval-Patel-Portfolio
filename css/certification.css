@@ -1,0 +1,62 @@
+:root{
+    --certificateTitleFontSize: 2.5rem;
+    --certificateContainerWidth: 50%;
+}
+
+.sectionCertificate {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    background-color: black;
+    transition: var(--sectionTransition);
+
+}
+
+.sectionCertificateInvisible {
+    opacity: 0;
+    visibility: collapse;
+    height: 0px;
+    transition: var(--sectionTransition);
+}
+
+.certificateContainer {
+    width: var(--certificateContainerWidth);
+    color: white;
+}
+
+.certificateInfo{
+    border: 1px solid white;
+    padding: 10px;    
+}
+
+p.certificateTitle {
+    font-size: var(--certificateTitleFontSize);
+}
+
+@media screen and (max-width: 1100px) {
+    :root{
+        --certificateTitleFontSize: 2rem;
+        --certificateContainerWidth: 60%;
+
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    :root{
+        --certificateTitleFontSize: 1.7rem;
+        --certificateContainerWidth: 70%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    :root{
+        --certificateTitleFontSize: 1.3rem;
+        --certificateContainerWidth: 80%;
+
+    }
+}

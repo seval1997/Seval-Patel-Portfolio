@@ -1,0 +1,71 @@
+:root {
+    --openSidebarWidthPercentage: 25%;
+    --openSidebarWidthPixel: 200px;
+    --closeSidebarWidthPixel: 50px;
+}
+
+div.sidebar {
+    height: max(100vh, 100%);
+    width: min(var(--openSidebarWidthPercentage), var(--openSidebarWidthPixel));
+    background-color: #012443;
+    float: left;
+    transition: var(--sidebarTransition);
+}
+
+div.sidebarClose {
+    width: min(var(--closeSidebarWidthPixel));
+    transition: var(--sidebarTransition);
+}
+
+div.sidebarHeader, div.sidebarMenu {
+    padding: 20px 10px;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+div.sidebarHeader {
+    background-color: black;
+}
+
+div.sidebarMenuHover {
+    background-color: gray;
+}
+
+div.sidebarIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    padding-right: 20px;
+}
+
+div.sidebarIconName {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease-in-out;
+}
+
+div.sidebarIconNameInvisible {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+
+    div.sidebar {
+        width: max(var(--openSidebarWidthPercentage), var(--openSidebarWidthPixel));
+    }
+
+    div.sidebarClose {
+        width: var(--closeSidebarWidthPixel);
+    }
+
+
+    div.stickyBtn {
+        width: 40px;
+        height: 40px;
+    }
+}
